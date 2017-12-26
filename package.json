@@ -1,0 +1,47 @@
+{
+  "name": "generator-chrome-modern-extension",
+  "version": "0.0.0",
+  "description": "Scaffold out a boilerplate for creating a chrome extension with up-to-date tools and autoreload",
+  "license": "MIT",
+  "repository": "marcofugaro/generator-chrome-modern-extension",
+  "author": {
+    "name": "Marco Fugaro",
+    "email": "marco.fugaro@gmail.com",
+    "url": "marcofugaro.it"
+  },
+  "keywords": [
+    "boilerplate",
+    "template",
+    "scaffold",
+    "chrome",
+    "browser",
+    "generator",
+    "extension",
+    "autoreload",
+    "yeoman-generator"
+  ],
+  "scripts": {
+    "test": "NODE_ENV=test ava"
+  },
+  "ava": {
+    "failWithoutAssertions": false
+  },
+  "main": "app/index.js",
+  "files": [
+    "app"
+  ],
+  "devDependencies": {
+    "ava": "^0.24.0",
+    "pify": "^3.0.0",
+    "yeoman-assert": "^3.1.0",
+    "yeoman-test": "^1.6.0"
+  },
+  "dependencies": {
+    "humanize-url": "^1.0.1",
+    "is-scoped": "^1.0.0",
+    "lodash": "^4.17.4",
+    "normalize-url": "^2.0.1",
+    "superb": "^2.0.0",
+    "yeoman-generator": "^2.0.1"
+  }
+}
