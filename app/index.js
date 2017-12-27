@@ -142,6 +142,8 @@ module.exports = class extends Generator {
       if (!backgroundScripts) {
         rm('src/background.js')
       }
+
+      rm('.yo-rc.json')
 		})
 	}
 
