@@ -1,6 +1,6 @@
 {
   "name": "generator-chrome-modern-extension",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Scaffold out a boilerplate for creating a chrome extension with up-to-date tools and autoreload",
   "license": "MIT",
   "repository": "marcofugaro/generator-chrome-modern-extension",
