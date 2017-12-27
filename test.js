@@ -78,6 +78,67 @@ test.serial('defaults to superb description', async () => {
 	assert.fileContent('README.md', /> My .+ extension/)
 })
 
+test.serial('action and actionType options work', async () => {
+	helpers.mockPrompt(generator, {
+    action: true,
+    actionType: 'Always (Browser Action)',
+		githubUsername: 'testuser',
+	})
+
+	await generator.run()
+
+	assert.jsonFileContent('src/manifest.json', { browser_action: { default_popup: 'popup.html' } })
+	assert.file([
+    'src/popup.html',
+    'src/popup.js',
+    'src/popup.scss',
+  ])
+})
+
+test.serial('optionPage option works', async () => {
+	helpers.mockPrompt(generator, {
+    optionPage: true,
+		githubUsername: 'testuser',
+	})
+
+	await generator.run()
+
+	assert.jsonFileContent('src/manifest.json', { options_ui: { page: 'options.html' } })
+	assert.file([
+    'src/options.html',
+    'src/options.js',
+    'src/options.scss',
+  ])
+})
+
+test.serial('contentScripts option works', async () => {
+	helpers.mockPrompt(generator, {
+    contentScripts: true,
+		githubUsername: 'testuser',
+	})
+
+	await generator.run()
+
+	assert.jsonFileContent('src/manifest.json', { content_scripts: [{ js: ['content.js'] }] })
+	assert.file([
+    'src/content.js',
+  ])
+})
+
+test.serial('backgroundScripts option works', async () => {
+	helpers.mockPrompt(generator, {
+    backgroundScripts: true,
+		githubUsername: 'testuser',
+	})
+
+	await generator.run()
+
+	assert.jsonFileContent('src/manifest.json', { background: { scripts: ['background.js'] } })
+	assert.file([
+    'src/background.js',
+  ])
+})
+
 test.serial('passing false to isOpenSource works', async () => {
 	helpers.mockPrompt(generator, {
     isOpenSource: false,

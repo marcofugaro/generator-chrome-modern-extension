@@ -74,7 +74,6 @@ module.exports = class extends Generator {
         title,
         description,
         action,
-        actionType,
         optionPage,
         contentScripts,
         backgroundScripts,
@@ -82,10 +81,11 @@ module.exports = class extends Generator {
         githubUsername,
         yarn,
       } = props
-      let { website } = props
+      let { website, actionType } = props
 
       // these are the filters, workaround for issue https://github.com/yeoman/yeoman-test/issues/29
       if (process.env.NODE_ENV === 'test') {
+        actionType = action && actionType.toLowerCase().includes('browser') ? 'browser' : 'page',
         website = website ? humanizeUrl(normalizeUrl(website)) : null
       }
 
