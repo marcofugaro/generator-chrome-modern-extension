@@ -1,0 +1,17 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "browsers": ["last 1 Chrome version"]
+      },
+      "modules": false
+    }],
+  ],
+  "plugins": [
+    "lodash",
+    "transform-decorators-legacy",
+    "transform-function-bind",
+    "transform-export-extensions",
+    "transform-class-properties"
+  ]
+}
