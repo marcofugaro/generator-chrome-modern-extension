@@ -13,7 +13,9 @@
     "postinstall": "check-node-version --package",
 		"start": "gulp dev --require @std/esm",
 		"build": "gulp build --require @std/esm",
-		"bundle": "gulp bundle --require @std/esm"
+		"bundle": "gulp bundle --require @std/esm",
+    "pretest": "npm run build",
+    "test": "ava"
 	},
 	"@std/esm": "all",
 	"engines": {
@@ -48,6 +50,7 @@
 		"gulp-notify": "^3.0.0",
 		"gulp-sass": "^3.1.0",
 		"gulp-zip": "^4.0.0",
+    "puppeteer": "^0.13.0",
 		"sass-module-importer": "^1.4.0",
 		"socket.io": "^2.0.4",
 		"socket.io-client": "^2.0.4",
