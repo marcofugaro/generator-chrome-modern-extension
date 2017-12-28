@@ -4,10 +4,10 @@
   "manifest_version": 2,
   "description": "<%= description %>",
   "author": "<%= name %>",<% if (isOpenSource) { %>
-	"homepage_url": "https://github.com/<%= githubUsername %>/<%= kebabTitle %>",<% } %>
+  "homepage_url": "https://github.com/<%= githubUsername %>/<%= kebabTitle %>",<% } %>
   "icons": {
-		"128": "images/icon.png"
-	},<% if (action) { %>
+    "128": "images/icon.png"
+  },<% if (action) { %>
   "<%= actionType === 'browser' ? 'browser' : 'page' %>_action": {
     "default_icon": "images/icon.png",
     "default_popup": "popup.html"
