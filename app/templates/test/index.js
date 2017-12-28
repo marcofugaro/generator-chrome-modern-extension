@@ -9,6 +9,7 @@ test.before('start up headless chrome', async t => {
   const extensionPath = path.resolve(__dirname, '../build')
 
   browser = await puppeteer.launch({
+    headless: false,
     args: [
       `--disable-extensions-except=${extensionPath}`,
       `--load-extension=${extensionPath}`,
