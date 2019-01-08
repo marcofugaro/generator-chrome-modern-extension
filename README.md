@@ -1,3 +1,5 @@
+# DEPRECATED in favor of [generator-browser-modern-extension](https://github.com/marcofugaro/generator-browser-modern-extension). All browsers matter ❤️
+
 # generator-chrome-modern-extension [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![devDependency Status][daviddm-dev-image]][daviddm-dev-url]
 
 > Scaffold out a boilerplate for creating a chrome extension with up-to-date tools and autoreload of the extension
